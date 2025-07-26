@@ -5,7 +5,7 @@
     "description": "Milk, eggs, bread, and vegetables",
     "status": "pending",
     "priority": "high",
-    "dueDate": "2025-07-28"
+    "dueDate": "2025-07-28T00:00:00-04:00"
   },
   {
     "id": "2",
@@ -13,7 +13,7 @@
     "description": "Complete the quarterly sales report",
     "status": "in-progress",
     "priority": "high",
-    "dueDate": "2025-07-27"
+    "dueDate": "2025-07-27T00:00:00-04:00"
   },
   {
     "id": "3",
@@ -21,7 +21,7 @@
     "description": "Schedule car maintenance",
     "status": "completed",
     "priority": "medium",
-    "dueDate": "2025-07-25"
+    "dueDate": "2025-07-25T00:00:00-04:00"
   },
   {
     "id": "4",
@@ -29,7 +29,7 @@
     "description": "Chapter 5 of 'The Great Gatsby'",
     "status": "pending",
     "priority": "low",
-    "dueDate": "2025-08-01"
+    "dueDate": "2025-08-01T00:00:00-04:00"
   },
   {
     "id": "5",
@@ -37,7 +37,7 @@
     "description": "30-minute run",
     "status": "in-progress",
     "priority": "medium",
-    "dueDate": "2025-07-26"
+    "dueDate": "2025-07-26T00:00:00-04:00"
   },
   {
     "id": "6",
@@ -45,7 +45,7 @@
     "description": "Research destinations and book flights",
     "status": "completed",
     "priority": "high",
-    "dueDate": "2025-07-20"
+    "dueDate": "2025-07-20T00:00:00-04:00"
   },
   {
     "id": "7",
@@ -53,7 +53,7 @@
     "description": "For birthday gifts",
     "status": "pending",
     "priority": "medium",
-    "dueDate": "2025-07-30"
+    "dueDate": "2025-07-30T00:00:00-04:00"
   },
   {
     "id": "8",
@@ -61,7 +61,7 @@
     "description": "Monthly financial review",
     "status": "in-progress",
     "priority": "low",
-    "dueDate": "2025-07-31"
+    "dueDate": "2025-07-31T00:00:00-04:00"
   },
   {
     "id": "9",
@@ -69,6 +69,6 @@
     "description": "All indoor and outdoor plants",
     "status": "completed",
     "priority": "low",
-    "dueDate": "2025-07-24"
+    "dueDate": "2025-07-24T00:00:00-04:00"
   }
 ]
