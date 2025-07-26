@@ -29,3 +29,5 @@ export interface TaskFilterProps {
     priority?: TaskPriority
   }) => void
 }
+
+export type BootstrapColor = "danger" | "warning" | "info"
