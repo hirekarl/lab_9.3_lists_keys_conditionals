@@ -1,0 +1,74 @@
+[
+  {
+    "id": "1",
+    "title": "Buy groceries",
+    "description": "Milk, eggs, bread, and vegetables",
+    "status": "pending",
+    "priority": "high",
+    "dueDate": "2025-07-28"
+  },
+  {
+    "id": "2",
+    "title": "Finish report",
+    "description": "Complete the quarterly sales report",
+    "status": "in-progress",
+    "priority": "high",
+    "dueDate": "2025-07-27"
+  },
+  {
+    "id": "3",
+    "title": "Call mechanic",
+    "description": "Schedule car maintenance",
+    "status": "completed",
+    "priority": "medium",
+    "dueDate": "2025-07-25"
+  },
+  {
+    "id": "4",
+    "title": "Read book",
+    "description": "Chapter 5 of 'The Great Gatsby'",
+    "status": "pending",
+    "priority": "low",
+    "dueDate": "2025-08-01"
+  },
+  {
+    "id": "5",
+    "title": "Exercise",
+    "description": "30-minute run",
+    "status": "in-progress",
+    "priority": "medium",
+    "dueDate": "2025-07-26"
+  },
+  {
+    "id": "6",
+    "title": "Plan vacation",
+    "description": "Research destinations and book flights",
+    "status": "completed",
+    "priority": "high",
+    "dueDate": "2025-07-20"
+  },
+  {
+    "id": "7",
+    "title": "Send thank you notes",
+    "description": "For birthday gifts",
+    "status": "pending",
+    "priority": "medium",
+    "dueDate": "2025-07-30"
+  },
+  {
+    "id": "8",
+    "title": "Review budget",
+    "description": "Monthly financial review",
+    "status": "in-progress",
+    "priority": "low",
+    "dueDate": "2025-07-31"
+  },
+  {
+    "id": "9",
+    "title": "Water plants",
+    "description": "All indoor and outdoor plants",
+    "status": "completed",
+    "priority": "low",
+    "dueDate": "2025-07-24"
+  }
+]
