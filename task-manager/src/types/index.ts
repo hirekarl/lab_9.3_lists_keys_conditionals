@@ -1,8 +1,5 @@
 export type TaskStatus = "pending" | "in-progress" | "completed"
-export type TaskStatusFilter = TaskStatus | "all"
-
 export type TaskPriority = "low" | "medium" | "high"
-export type TaskPriorityFilter = TaskPriority | "all"
 
 export type TaskID = string
 
@@ -27,11 +24,16 @@ export interface TaskItemProps {
   onDelete: (taskId: TaskID) => void
 }
 
+export type TaskStatusFilter = TaskStatus | "all"
+export type TaskPriorityFilter = TaskPriority | "all"
+
+export interface TaskFilters {
+  status?: TaskStatusFilter
+  priority?: TaskPriorityFilter
+}
+
 export interface TaskFilterProps {
-  onFilterChange: (filters: {
-    status?: TaskStatusFilter
-    priority?: TaskPriorityFilter
-  }) => void
+  onFilterChange: (filters: TaskFilters) => void
 }
 
 export type BootstrapColor = "danger" | "warning" | "info"

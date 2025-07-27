@@ -1,11 +1,5 @@
 import { useState, type ReactNode } from "react"
-import type {
-  Task,
-  TaskID,
-  TaskPriorityFilter,
-  TaskStatus,
-  TaskStatusFilter,
-} from "./types"
+import type { Task, TaskID, TaskStatus, TaskFilters } from "./types"
 import Header from "./components/Header/Header"
 import TaskFilter from "./components/TaskFilter/TaskFilter"
 import TaskList from "./components/TaskList/TaskList"
@@ -27,13 +21,13 @@ function App(): ReactNode {
   }
 
   function handleDelete(taskId: TaskID): void {
-    setTasks(tasks.filter((t) => t.id !== taskId))
+    setTasks((prevTasks) => prevTasks.filter((t) => t.id !== taskId))
   }
 
-  function handleFilter(filters: {
-    status?: TaskStatusFilter
-    priority?: TaskPriorityFilter
-  }): void {
+  // Not properly composed; come back tomorrow and fix
+  // (need to hold the filters object as a state variable
+  // and compose based on what comes back)
+  function handleFilters(filters: TaskFilters): void {
     if ("status" in filters && filters.status !== "all") {
       setVisibleTaskIds(
         tasks.filter((t) => t.status === filters.status).map((t) => t.id)
@@ -50,7 +44,7 @@ function App(): ReactNode {
   return (
     <div className="container">
       <Header />
-      <TaskFilter onFilterChange={handleFilter} />
+      <TaskFilter onFilterChange={handleFilters} />
       <TaskList
         tasks={tasks.filter((t) => visibleTaskIds.includes(t.id))}
         onStatusChange={handleStatusChange}
