@@ -6,6 +6,7 @@ import type {
   TaskStatus,
   TaskStatusFilter,
 } from "./types"
+import Header from "./components/Header/Header"
 import TaskFilter from "./components/TaskFilter/TaskFilter"
 import TaskList from "./components/TaskList/TaskList"
 
@@ -48,6 +49,7 @@ function App(): ReactNode {
 
   return (
     <div className="container">
+      <Header />
       <TaskFilter onFilterChange={handleFilter} />
       <TaskList
         tasks={tasks.filter((t) => visibleTaskIds.includes(t.id))}
