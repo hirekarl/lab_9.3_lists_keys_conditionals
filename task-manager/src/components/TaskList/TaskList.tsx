@@ -34,11 +34,5 @@ export default function TaskList({
       )
     })
 
-  return (
-    <>
-      <div className="col-md-6 offset-md-3 col-sm-10 offset-sm-1">
-        {taskItems}
-      </div>
-    </>
-  )
+  return <div className="row">{taskItems}</div>
 }
