@@ -8,9 +8,10 @@ import { MOCK_TASKS } from "./data/mockTasks"
 
 function App(): ReactNode {
   const [tasks, setTasks] = useState<Task[]>(MOCK_TASKS)
-  const [visibleTaskIds, setVisibleTaskIds] = useState<TaskID[]>(
-    tasks.map((t) => t.id)
-  )
+  const [filters, setFilters] = useState<TaskFilters>({
+    status: "all",
+    priority: "all",
+  })
 
   function handleStatusChange(taskId: TaskID, newStatus: TaskStatus): void {
     setTasks((prevTasks) =>
@@ -24,21 +25,33 @@ function App(): ReactNode {
     setTasks((prevTasks) => prevTasks.filter((t) => t.id !== taskId))
   }
 
-  // Not properly composed; come back tomorrow and fix
-  // (need to hold the filters object as a state variable
-  // and compose based on what comes back)
-  function handleFilters(filters: TaskFilters): void {
-    if ("status" in filters && filters.status !== "all") {
-      setVisibleTaskIds(
-        tasks.filter((t) => t.status === filters.status).map((t) => t.id)
-      )
-    } else if ("priority" in filters && filters.priority !== "all") {
-      setVisibleTaskIds(
-        tasks.filter((t) => t.priority === filters.priority).map((t) => t.id)
-      )
+  function handleFilters(
+    filter: { status: string } | { priority: string }
+  ): void {
+    let name: string
+    let value: string
+
+    if ("status" in filter) {
+      name = "status"
+      value = filter.status
     } else {
-      setVisibleTaskIds(tasks.map((t) => t.id))
+      name = "priority"
+      value = filter.priority
     }
+
+    setFilters((prevFilters) => ({
+      ...prevFilters,
+      [name]: value,
+    }))
+  }
+
+  function applyFilters(): Task[] {
+    return tasks.filter((task) => {
+      return (
+        (filters.status === "all" || task.status === filters.status) &&
+        (filters.priority === "all" || task.priority === filters.priority)
+      )
+    })
   }
 
   return (
@@ -46,7 +59,7 @@ function App(): ReactNode {
       <Header />
       <TaskFilter onFilterChange={handleFilters} />
       <TaskList
-        tasks={tasks.filter((t) => visibleTaskIds.includes(t.id))}
+        tasks={applyFilters()}
         onStatusChange={handleStatusChange}
         onDelete={handleDelete}
       />

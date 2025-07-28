@@ -33,7 +33,7 @@ export interface TaskFilters {
 }
 
 export interface TaskFilterProps {
-  onFilterChange: (filters: TaskFilters) => void
+  onFilterChange: (filter: { status: string } | { priority: string }) => void
 }
 
 export type BootstrapColor = "danger" | "warning" | "info"
