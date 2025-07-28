@@ -74,6 +74,7 @@ export default function TaskItem({
           <div className="d-flex justify-content-between">
             <div>
               <select
+                id={`status-select-${id}`}
                 value={status}
                 className="form-select"
                 onChange={handleStatusSelect}>

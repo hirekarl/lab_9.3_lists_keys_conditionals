@@ -37,7 +37,7 @@ export default function TaskFilter({
       <div className="col-md-6 offset-md-3 col-sm-10 offset-sm-1 mb-3">
         <div className="d-flex justify-content-between">
           <div>
-            <select onChange={handlePrioritySelect} className="form-select">
+            <select id="priority-filter-select" onChange={handlePrioritySelect} className="form-select">
               <option value="all">Filter by Priority</option>
               <option value="low">Low</option>
               <option value="medium">Medium</option>
@@ -45,7 +45,7 @@ export default function TaskFilter({
             </select>
           </div>
           <div>
-            <select onChange={handleStatusSelect} className="form-select">
+            <select id="status-filter-select" onChange={handleStatusSelect} className="form-select">
               <option value="all">Filter by Status</option>
               <option value="pending">Pending</option>
               <option value="in-progress">In Progress</option>
