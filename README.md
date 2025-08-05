@@ -57,7 +57,7 @@ This lab will help you practice building components that work with dynamic data 
 
 #### 3. Visual Feedback
 - [x] Show different styles based on task status and priority.
-- [ ] Implement hover and active states.
+- [x] Implement hover and active states.
 - [x] Add visual indicators for task properties.
 
 #### 4.Component Composition
